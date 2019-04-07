@@ -1,6 +1,6 @@
 {
   "name": "react-monthly-heatmap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react based component for monthly heatmap",
   "main": "build/index.js",
   "scripts": {
@@ -9,6 +9,10 @@
     "dev": "webpack-dev-server --env testServer --mode development --open"
   },
   "author": "Sujan Joshi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skjo0c/react-monthly-heatmap"
+  },
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.7.0"
