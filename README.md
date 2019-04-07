@@ -5,6 +5,7 @@ A calendar heatmap component built with date-fns, inspired by github's [repo](ht
 Based on following tutorials:
 
 [Publish Your Own React Component as Npm Package Under 5 Minutes](https://medium.com/quick-code/publish-your-own-react-component-as-npm-package-under-5-minutes-8a47f0cb92b9)
+
 [Create a custom calendar in React](https://blog.flowandform.agency/create-a-custom-calendar-in-react-3df1bfd0b728)
 
 ## Setup
