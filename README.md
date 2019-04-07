@@ -1,96 +1,48 @@
-# react-component-publish
+# react-monthly-heatmap
 
-A barebones boilerplate to quickly publish react components.
+A calendar heatmap component built with date-fns, inspired by github's [repo](https://github.com/patientslikeme/react-calendar-heatmap). The component expands to size of container and is super configurable. Try it out on [CodeSandbox](https://codesandbox.io/s/r49xv17zzm).
 
-Features Webpack 4 and Babel 7.
+Based on following tutorials:
 
-It will compile down to commonjs, and will require a peer dependancy of react, meaning it will use whatever version of react the host project is using. Hopefully this will minimize compatibility issues.
+[Publish Your Own React Component as Npm Package Under 5 Minutes](https://medium.com/quick-code/publish-your-own-react-component-as-npm-package-under-5-minutes-8a47f0cb92b9)
+[Create a custom calendar in React](https://blog.flowandform.agency/create-a-custom-calendar-in-react-3df1bfd0b728)
 
-[Based on this tutorial](https://medium.com/quick-code/publish-your-own-react-component-as-npm-package-under-5-minutes-8a47f0cb92b9) by [codewithbernard](https://github.com/codewithbernard)
+## Setup
 
-## To start
-
-```
-npm i
-npm start
-```
-
-Edit `src/index.js` (your component)
-
-## To view your component in isolation with a basic webpack dev server:
-type:
+Install the npm module with npm:
 
 ```
-npm run dev
+npm i react-monthly-heatmap
 ```
 
-Edit `/srctest/app.js` to change the parent environment, pass in props, etc.
+## Usage
 
-## To test your component in another project (locally), before publishing to npm:
-
-Build this project:
+Import the component:
 
 ```
-npm run build
+import HeatMapCalendar from 'react-monthly-heatmap';
 ```
 
-In this project's root directory, type:
+To use the component, simply use like following:
 
 ```
-npm link
+<CalendarHeatmap
+  startDate={new Date('2016-01-01')}
+  endDate={new Date('2016-04-01')}
+  values={[
+    { date: '2019-03-31', count: 1, color: '#8cc665' },
+    { date: '2019-04-01', count: 2, color: '#44a340' },
+    { date: '2019-04-06', count: 3, color: '#1e6823' },
+    // ...and so on.
+  ]}
+/>
 ```
 
-And then, in the project (root dir) you would like to use your component:
+## Props
 
-```
-npm link my-awesome-component
-```
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `values` | **Required**, Array of Object | Required array of objects which each have a date property, count and color code. Example: `[{ date: '2019-03-31', count: 1, color: '#8cc665' }]` |
+| `onClick` | Function | Callback to invoke when a square is clicked, e.g. `(value) => alert(value)` |
+| `onMouseOver` | Function | Callback to invoke when mouse pointer is over a date, e.g. `(event, value) => console.log(event, value)` |
 
-For this example I've used the package name `my-awesome-component`.
-This creates a symlink of your package in your project's node_modules/ dir.
-Now, you may import the component in your test project, as if it was a normally installed dependancy:
-
-```
-import MyAwesomeComponent from 'my-awesome-component'
-```
-
-If you're using a hot-reload system, you should be able to observe any changes you make to your component (as long as you build them)
-
-## To publish your component to npm
-Update the package.json with correct information.
-Important things to set:
-
-```json
-{
-  "name": "cool-beans",
-  "version": "4.2.0",
-  "description": "My wizzbang gizmo",
-  "author": "stevejobs",
-  "license": "ISC"
-}
-```
-
-If you have a git repo for the project, include the details:
-
-```json
-"repository": {
-    "type" : "git",
-    "url" : "https://github.com/zxol/react-component-publish"
-  },
-```
-
-Then, in the root directory, type:
-
-```
-npm publish
-```
-
-[npm docs on publishing packages](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)
-
-## A note on webpack configs and the dev server:
-There are two webpack configs.
-
-- One for building the published component `webpack.publish.js`
-- One for viewing the component in the dev server. `webpack.testServer.js`
-
-Note that they are separate, so any additions you make will have to be mirrored in both files, if you want to use the dev server. If anyone knows a better way to do this, please let me know.
