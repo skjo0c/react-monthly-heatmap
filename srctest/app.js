@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import MyComponent from '../src/index.js'
+import HeatMapCalendar from '../src/index.js'
 
 const ParentWrapper = () => {
   return (
@@ -13,7 +13,7 @@ const ParentWrapper = () => {
         alignItems: 'center'
       }}
     >
-      <MyComponent />
+      <HeatMapCalendar />
     </div>
   )
 }

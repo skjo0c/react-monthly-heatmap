@@ -1,30 +1,31 @@
 {
-  "name": "react-component-publish",
+  "name": "react-monthly-heatmap",
   "version": "1.0.0",
-  "description": "A boilerplate for publishing your own react components",
+  "description": "A react based component for monthly heatmap",
   "main": "build/index.js",
   "scripts": {
     "start": "webpack --env publish --mode production --watch",
     "build": "webpack --env publish --mode production",
     "dev": "webpack-dev-server --env testServer --mode development --open"
   },
-  "author": "zxol",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zxol/react-component-publish"
-  },
+  "author": "Sujan Joshi",
+  "license": "MIT",
   "peerDependencies": {
     "react": "^16.7.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "date-fns": "^1.30.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"

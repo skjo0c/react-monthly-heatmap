@@ -15,6 +15,10 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.(css|less)$/,
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
