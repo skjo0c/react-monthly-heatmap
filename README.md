@@ -38,9 +38,8 @@ To use the component, simply use like following:
 
 ## Props
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| `values` | **Required**, Array of Object | Required array of objects which each have a date property, count and color code. Example: `[{ date: '2019-03-31', count: 1, color: '#8cc665' }]` |
-| `onClick` | Function | Callback to invoke when a square is clicked, e.g. `(value) => alert(value)` |
-| `onMouseOver` | Function | Callback to invoke when mouse pointer is over a date, e.g. `(event, value) => console.log(event, value)` |
-
+| Name      | Type                          | Description                                                                                                                                      |
+| --------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `values`  | **Required**, Array of Object | Required array of objects which each have a date property, count and color code. Example: `[{ date: '2019-03-31', count: 1, color: '#8cc665' }]` |
+| `onClick` | Function                      | Callback to invoke when a square is clicked, e.g. `(value) => alert(value)`                                                                      |
+| `toolTip` | Function                      | Callback to invoke when mouse pointer is over a date                                                                                             |

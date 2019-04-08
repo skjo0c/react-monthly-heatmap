@@ -193,6 +193,7 @@ main {
   top: 0.75em;
   right: 0.75em;
   font-weight: 700;
+  color: #282c3475;
 }
 
 .calendar .body .disabled {
