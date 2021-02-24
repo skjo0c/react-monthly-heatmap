@@ -1,6 +1,6 @@
 {
   "name": "react-monthly-heatmap",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A react based component for monthly heatmap",
   "main": "build/index.js",
   "scripts": {
